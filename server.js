@@ -21,9 +21,16 @@ const server = http.createServer((req, res) => {
     case '/about': 
       path += "/about.html";
       break;
-    
+     //redirect router(if you change the router and want to previous router page)
+      case '/about-me':
+        res.statusCode = 301;
+        res.setHeader('Location','/about');
+              res.end();      
+      break;
+
     default:
       path += "/404.html";
+      res.statusCode=404;
       break;
   }
 
