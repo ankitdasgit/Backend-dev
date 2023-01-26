@@ -1,11 +1,23 @@
 //make a server
 const http = require("http");
 const fs = require("fs");
+const _= require('lodash');
 
 const server = http.createServer((req, res) => {
-  //   console.log("request has been made from browser to server");
+    console.log("request has been made from browser to server");
   // console.log(req.method);
   // console.log(req.url);
+
+//lodash use
+let num = _.random(0,20);
+console.log("result is "+num);
+
+function greeting(){
+  console.log("hello");
+}
+
+greeting();
+
 
   res.setHeader("context-type", "text/html");
   //   res.write("<html><body><h1>this is my response to server</h1></body></html>");
