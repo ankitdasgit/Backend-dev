@@ -1,11 +1,11 @@
 const express = require("express");
 const app = express();
 
-app.listen(3000);
+app.listen(3000); 
 
 app.get("/", (req, res) => {
   res.sendFile(
-    "C:/Users/dasan/Desktop/learning things/Backend dev/views/ index.html"
+    "./views/index.html",{root:__dirname}
   );
 });
 
